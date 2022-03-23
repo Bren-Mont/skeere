@@ -1,0 +1,33 @@
+<%- include('header-admin.ejs') %>
+
+    <div>
+        <ul>
+            <li>
+                <strong>Fecha: </strong>
+                <%= res.fechaCompra %>
+            </li>
+            <li>
+                <strong>Comprador: </strong>
+                <%= res.idComprador %>
+            </li>
+            <li>
+                <strong>Producto: </strong>
+                <%= res.producto %>
+            </li>
+            <li>
+                <strong>Cantidad: </strong>
+                <%= res.cantidad %>
+            </li>
+            <li>
+            <li>
+                <strong>Precio: </strong>
+                <%= res.precio %>
+            </li>
+            <li>
+                <strong>Comprado: </strong>
+                <%= res.estado %>
+            </li>
+        </ul>
+    </div>
+
+    <%- include('footer.ejs') %>

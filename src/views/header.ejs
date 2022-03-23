@@ -1,0 +1,53 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-black">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/store">
+      <img
+        src="https://firebasestorage.googleapis.com/v0/b/personal-eea8d.appspot.com/o/skeere%2FRecurso%201.png?alt=media&token=b8b9fc07-9097-4150-aeb5-588eea53ff5a"
+        alt=""
+        class="img-responsive" 
+        width="200px"
+      />
+    </a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div id="cut">
+        <ul class="navbar-nav ml-auto" >
+          <li class="nav-item"><a class="nav-link" href="store" id="col"style="color: #ffffff;">Tienda</a></li>
+          <li class="nav-item"><a class="nav-link" href="login" id="col"style="color: #ffffff;">Login</a></li>
+
+        </ul>
+      </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+      aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+  <% if(header=='login' ){ %>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div id="cut">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="store" id="col">Tienda</a></li>
+        </ul>
+      </div>
+  <% } %>
+  <% if(header=='home' ){ %>
+    <i class='bx bx-cart-alt btn-car'>
+      <span id="count-cart"></span>
+    </i>
+    <a href="/checkout" class="checkout" style="margin-left:10px;">
+      Ir a checkout
+    </a>
+    <form class="d-flex">
+      <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search" name="search" style="width: 600px;">
+      <button class="btn btn-outline-success" type="submit" style="margin:10px;">Busqueda</button>
+    </form>
+  <% } %>
+  <% if(header=='checkout' ){ %>
+    <a href="/">
+      Volver
+    </a>
+  <% } %>
+</nav>
+<% if(header=='home' ){ %>
+  <div class="banner"></div>
+<% } %>

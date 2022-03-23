@@ -1,0 +1,25 @@
+*{
+  font-family: 'Roboto', sans-serif;
+}
+.banner{
+  height: 100vh;
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/personal-eea8d.appspot.com/o/skeere%2F20220308_083746_0000.png?alt=media&token=51232af2-446b-4bcd-b010-53eab3e94973');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-attachment: fixed; */
+  background-position: center;
+}
+
+.copy {
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(23, 23, 24);
+  font-size:30px
+};
+
+.bx {
+  font-size: 2em;
+}

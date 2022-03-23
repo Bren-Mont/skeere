@@ -1,0 +1,58 @@
+<div class="main_content">
+  <div class="header"> Crear un nuevo producto </div>
+  <div class="info">
+    <form action="/comprar" method="post">
+      <div class="row">
+        <div class="col-md-6">
+          <label for="validationDefault02" class="form-label">Referencia</label>
+          <input name="referencia" type="number" class="form-control" value="" required>
+        </div>
+        <div class="col-md-6">
+          <label for="validationDefault02" class="form-label">Nombre del producto</label>
+          <input name="producto" type="text" class="form-control" id="producto" value="" required>
+        </div>
+        <div class="col-md-6">
+          <label for="validationDefault02" class="form-label">Tipo de producto</label>
+          <div class="row">
+            <div class="col-md-6">
+              <input type="radio" name="categoria" value="camisas" class="form-check-input">
+              <label for="validationDefault04" class="form-label">Camisas</label>
+            </div>
+            <div class="col-md-6">
+              <input type="radio" name="categoria" value="gorras" class="form-check-input">
+              <label for="validationDefault04" class="form-label">Gorras</label>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="validationDefault02" class="form-label">Talla</label>
+          <select name="talla" class="form-select" required>
+            <option value="s">S</option>
+            <option value="m">M</option>
+            <option value="l">L</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label for="validationDefault02" class="form-label">Precio</label>
+          <input name="precio" type="number" class="form-control" id="precio" value="" required>
+        </div>
+        <div class="col-md-6">
+          <label for="validationDefault02" class="form-label">Cantidad</label>
+          <input name="cantidad" type="number" class="form-control" id="cantidad" value="" required>
+        </div>
+        <div class="col-md-6">
+          <label for="validationDefault03" class="form-label">Fecha de ingreso
+          </label>
+          <input name="fechaIngreso" type="date" class="form-control" id="validationDefault03" required>
+
+        </div>
+        <div class="col-md-6">
+          <label for="validationDefault03" class="form-label">Archivo
+          </label>
+          <input name="thumbnailUrl" type="text" class="form-control" id="validationDefault03" required>
+
+        </div>
+        <div class="col-12 d-grid gap-2"><button type="submit" class="btn btn-success">Guardar</button></div>
+      </div>
+  </div>
+</div>

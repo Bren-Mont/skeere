@@ -1,0 +1,44 @@
+<%- include('header-admin.ejs') %>
+  <div class="main_content">
+    <div class="header"> Ventas </div>
+    <div class="info">
+      <table class="table">
+        <thead>
+          <tr>
+            <td><strong>Cliente</strong></td>
+            <td><strong>Direccion</strong></td>
+            <td><strong>Ciudad</strong></td>
+            <td><strong>Departamento</strong></td>
+            <td><strong>Telefono</strong></td>
+            <td><strong>Correo</strong></td>
+            <td><strong>Total</strong></td>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(var i=0; i<ventas.length; i++){ %>
+            <tr>
+              <td>
+                <%= ventas[i].name%>
+              </td>
+              <td>
+                <%= ventas[i].address%>
+              </td>
+              <td>
+                <%= ventas[i].city%>
+              </td>
+              <td>
+                <%= ventas[i].departamento%>
+              </td>
+              <td>
+                <%= ventas[i].phone%>
+              </td>
+              <td>
+                <%= ventas[i].email%>
+              </td>
+              <td>
+                <%= ventas[i].total%>
+              </td>
+            </tr>
+            <% } %>
+
+        </tbody>

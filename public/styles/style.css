@@ -1,0 +1,18 @@
+.Main {
+  padding: 10px;
+  grid-template-columns: minmax(auto, 768px);
+  display: grid;
+  justify-content: center;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #ffffff!important;
+}
+
+.btn-car{
+  font-size: 2rem;
+}
+
+.checkout {
+  min-width: 91px;
+}

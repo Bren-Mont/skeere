@@ -1,0 +1,59 @@
+<%- include('header-admin.ejs') %>
+
+<div class="main_content">
+  <div class="header"> Inventario </div>
+  <div class="info">
+    <table class="table">
+      <thead>
+        <tr>
+          <td><strong>Referencia</strong></td>
+          <td><strong>Producto</strong></td>
+          <td><strong>Fecha de ingreso</strong></td>
+          <td><strong>Talla</strong></td>
+          <td><strong>Registrado</strong></td>
+          <td><strong>Precio</strong></td>
+          <td><strong>Cantidad</strong></td>
+          <td><strong>Imagen</strong></td>
+          <td><strong>Acciones</strong></td>
+        </tr>
+      </thead>
+      <tbody>
+
+        <% var total=0; %>
+          <% for(var i=0; i<productos.length; i++){ %>
+            <% total=total + productos[i].total; %>
+
+              <tr>
+                <td>
+                  <%= productos[i].referencia%>
+                </td>
+                <td>
+                  <%= productos[i].producto%>
+                </td>
+                <td>
+                  <%= productos[i].fechaIngreso %>
+                </td>
+                <td>
+                  <%= productos[i].talla %>
+                </td>
+                <td>
+                  <%= productos[i].estado%>
+                </td>
+                <td>
+                  <%= productos[i].precio%>
+                </td>
+                <td>
+                  <%= productos[i].cantidad%>
+                </td>
+                <td><img src="<%= productos[i].thumbnailUrl%>" width="100px" height="100px"
+                    alt="<%= productos[i].producto%>"></td>
+                <td>
+                  <a href="/modificar/<%= productos[i]._id %>"><i class='bx bx-edit-alt'></i></a>
+                  <a href="/eliminar/<%= productos[i]._id %>"><i class='bx bx-trash'></i></a>
+                </td>
+              </tr>
+              <% } %>
+      </tbody>
+    </table>
+  </div>
+</div>

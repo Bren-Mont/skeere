@@ -1,0 +1,65 @@
+<div class="main_content">
+  <div class="header"> Modificar un producto </div>
+  <div class="info">
+    <form action="/modificar" method="post">
+      <input type="hidden" name="id" value="<%= compras._id %>">
+      <div class="row">
+      <div class="col-6">
+        <label for="validationDefault02" class="form-label">Referencia</label>
+        <input name="referencia" type="number" class="form-control" value="<%= compras.referencia%>" required>
+      </div>
+      <div class="col-6">
+        <label for="validationDefault02" class="form-label">Nombre del producto</label>
+        <input name="producto" type="text" class="form-control" id="producto" value="<%= compras.producto%>" required>
+      </div>
+      <div class="col-6">
+        <label for="validationDefault02" class="form-label">Tipo de producto</label>
+        <div class="row">
+          <div class="col-6">
+            <label for="validationDefault04" class="form-label">Camisas</label>
+            <input type="radio" name="categoria" value="camisas" <%=(compras.categoria=="camisas" )? "checked" :"" %> >
+    
+          </div>
+          <div class="col-6">
+            <label for="validationDefault04" class="form-label">Gorras</label>
+            <input type="radio" name="categoria" value="gorras" <%=(compras.categoria=="gorras" )? "checked" :"" %> >
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <label for="validationDefault02" class="form-label">Talla</label>
+        <select name="talla" required class="form-select">
+          <option <%=(compras.talla=="s" )? "selected" :"" %> value="S">S</option>
+          <option <%=(compras.talla=="m" )? "selected" :"" %> value="M">M</option>
+          <option <%=(compras.talla=="l" )? "selected" :"" %> value="L">L</option>
+        </select>
+      </div>
+      <div class="col-6">
+        <label for="validationDefault02" class="form-label">Precio</label>
+        <input name="precio" type="number" class="form-control" id="precio" value="<%= compras.precio%>" required>
+      </div>
+      <div class="col-6">
+        <label for="validationDefault02" class="form-label">Cantidad</label>
+        <input name="cantidad" type="number" class="form-control" id="cantidad" value="<%= compras.cantidad%>" required>
+      </div>
+      <div class="col-6">
+        <label for="validationDefault03" class="form-label">Archivo
+        </label>
+        <input name="thumbnailUrl" type="text" class="form-control" id="validationDefault03" value="<%= compras.thumbnailUrl%>" required>
+      </div>
+      <div class="col-md-6">
+        <label for="validationDefault03" class="form-label">Fecha de ingreso
+        </label>
+        <input name="fechaIngreso" type="date" class="form-control" id="validationDefault03"
+          value="<%= compras.fechaIngreso%>" required>
+      </div>
+      <div class="col-12 d-grid gap-2">
+        <button type="submit" class="btn btn-success">Guardar</button>
+      </div>
+
+    </div>
+
+      <br><br>
+    </form>
+  </div>
+</div>

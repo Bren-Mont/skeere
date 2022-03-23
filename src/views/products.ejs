@@ -1,0 +1,15 @@
+<div class="Products">
+  <div class="Products-items">
+    <% for(var i=0; i<products.length; i++){ %>
+    <div class="Products-item">
+      <img src="<%= products[i].thumbnailUrl%>" alt="{product.producto}" />
+      <div class="Product-item-info">
+        <h2 class="Products-item-info-h2"><%= products[i].producto%></h2>
+        <span>$ <%= products[i].precio%></span>
+        <p>Talla: <%= products[i].talla%></p>
+      </div>
+      <button type="button" id="<%= products[i].referencia%>" onClick="handleAddToCard('<%= JSON.stringify(products[i])%>');">Añadir</button>
+    </div>
+    <% } %>
+  </div>
+</div> 
